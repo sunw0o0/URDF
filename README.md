@@ -1,4 +1,4 @@
-[Screencast from 2026-11-18 08-09-55.webm](https://github.com/user-attachments/assets/abd70b50-5b40-47f5-9b96-bf2cd0265914)
+[Screencast from 2026-11-18 08-35-31.webm](https://github.com/user-attachments/assets/2f92cad0-1ef0-41d5-8c5e-5072bdadc56e)
 
 일반 그리퍼 영상
 
