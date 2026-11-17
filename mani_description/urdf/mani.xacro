@@ -1,0 +1,363 @@
+<?xml version="1.0" ?>
+<robot name="mani" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mani_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mani_description)/urdf/mani.trans" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.08611419735701668 0.11775637659074566 0.0766756007763797" rpy="0 0 0"/>
+    <mass value="3.4488870538906657"/>
+    <inertia ixx="0.007379" iyy="0.007377" izz="0.002391" ixy="-0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque636363"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin xyz="-0.14370583819285962 0.07182261879801066 0.3289128118191452" rpy="0 0 0"/>
+    <mass value="4.4410525498551205"/>
+    <inertia ixx="0.072953" iyy="0.074887" izz="0.021013" ixy="3.4e-05" iyz="-0.000666" ixz="0.025151"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.084268 -0.049789 -0.171" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque254254255"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.084268 -0.049789 -0.171" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin xyz="-0.06314243121946576 -0.06631001811724577 -0.17486250498261818" rpy="0 0 0"/>
+    <mass value="2.822961142442141"/>
+    <inertia ixx="0.029299" iyy="0.033497" izz="0.010143" ixy="0.000114" iyz="0.000344" ixz="-0.012675"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.082803 -0.190376 -0.573052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque128128128"/>
+  </visual>
+  <collision>
+    <origin xyz="0.082803 -0.190376 -0.573052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link4_1">
+  <inertial>
+    <origin xyz="-0.04652984049128481 0.002617538590934304 -0.014274587242176395" rpy="0 0 0"/>
+    <mass value="1.168279578078801"/>
+    <inertia ixx="0.000836" iyy="0.002054" izz="0.001536" ixy="8e-05" iyz="-2.5e-05" ixz="0.000248"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.208157 -0.125755 -0.27605" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque254254255"/>
+  </visual>
+  <collision>
+    <origin xyz="0.208157 -0.125755 -0.27605" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link5_1">
+  <inertial>
+    <origin xyz="0.01795777162193335 -0.0041357304925372235 -0.02354190609310794" rpy="0 0 0"/>
+    <mass value="1.0675075815036903"/>
+    <inertia ixx="0.000527" iyy="0.000625" izz="0.000427" ixy="-1.9e-05" iyz="-4.5e-05" ixz="-7.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.25979 -0.12821 -0.235049" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque254254255"/>
+  </visual>
+  <collision>
+    <origin xyz="0.25979 -0.12821 -0.235049" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper4_1">
+  <inertial>
+    <origin xyz="-0.012556361833502783 -0.04154744582402814 -0.019421348653152468" rpy="0 0 0"/>
+    <mass value="0.2882171797003632"/>
+    <inertia ixx="0.000135" iyy="0.00012" izz="9.5e-05" ixy="-2.1e-05" iyz="-2.2e-05" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.335054 -0.189142 -0.111852" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque178178178"/>
+  </visual>
+  <collision>
+    <origin xyz="0.335054 -0.189142 -0.111852" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link6_1">
+  <inertial>
+    <origin xyz="-0.005451587144326364 0.0018417592126873106 -0.032831024622925725" rpy="0 0 0"/>
+    <mass value="2.1820688452464587"/>
+    <inertia ixx="0.001977" iyy="0.001932" izz="0.002652" ixy="-1.5e-05" iyz="-2.8e-05" ixz="0.000122"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.260446 -0.11641 -0.176754" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="0.260446 -0.11641 -0.176754" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper3_1">
+  <inertial>
+    <origin xyz="-0.023820717057683932 -0.013514436468572921 -0.0022268474857438797" rpy="0 0 0"/>
+    <mass value="0.2882178862922096"/>
+    <inertia ixx="0.000103" iyy="0.000139" izz="0.000109" ixy="-5e-06" iyz="2.2e-05" ixz="-2.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.236303 -0.05352 -0.090007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque178178178"/>
+  </visual>
+  <collision>
+    <origin xyz="0.236303 -0.05352 -0.090007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper5_1">
+  <inertial>
+    <origin xyz="-0.03236775373935735 -0.0011200238405873475 0.0009785507795123383" rpy="0 0 0"/>
+    <mass value="0.062189277883603254"/>
+    <inertia ixx="3.9e-05" iyy="5.4e-05" izz="6e-05" ixy="-2e-06" iyz="1.7e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.281656 -0.13544 -0.120946" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque254254255"/>
+  </visual>
+  <collision>
+    <origin xyz="0.281656 -0.13544 -0.120946" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper6_1">
+  <inertial>
+    <origin xyz="-0.03506259866601519 0.0025931273867517424 -0.0021894965018367796" rpy="0 0 0"/>
+    <mass value="0.052387864400433644"/>
+    <inertia ixx="2.8e-05" iyy="3.9e-05" izz="4.4e-05" ixy="-2e-06" iyz="1.4e-05" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.291402 -0.1578 -0.138576" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque178178178"/>
+  </visual>
+  <collision>
+    <origin xyz="0.291402 -0.1578 -0.138576" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper2_1">
+  <inertial>
+    <origin xyz="-0.007505586554951427 -0.03255507283607627 0.0016997714620596155" rpy="0 0 0"/>
+    <mass value="0.062189277883603254"/>
+    <inertia ixx="5.3e-05" iyy="4.1e-05" izz="5.9e-05" ixy="-4e-06" iyz="-2e-06" ixz="1.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.258303 -0.103167 -0.115545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque254254255"/>
+  </visual>
+  <collision>
+    <origin xyz="0.258303 -0.103167 -0.115545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper1_1">
+  <inertial>
+    <origin xyz="-0.0033085005854610605 -0.03500309219052473 -0.002175945364568929" rpy="0 0 0"/>
+    <mass value="0.052387864400433644"/>
+    <inertia ixx="3.8e-05" iyy="2.9e-05" izz="4.4e-05" ixy="-4e-06" iyz="-1e-06" ixz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.237865 -0.083812 -0.126193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque178178178"/>
+  </visual>
+  <collision>
+    <origin xyz="0.237865 -0.083812 -0.126193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/gripper1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin xyz="-3.834336518210302e-06 -0.0001644624444738091 0.02966951604747539" rpy="0 0 0"/>
+    <mass value="3.1634597513321503"/>
+    <inertia ixx="0.005286" iyy="0.001687" izz="0.005154" ixy="-9.8e-05" iyz="-2e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.086114 -0.117764 -0.138" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.086114 -0.117764 -0.138" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mani_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="arm_joint2" type="continuous">
+  <origin xyz="-0.001846 -0.067975 0.033" rpy="0 0 0"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="0.027147 0.999631 -0.0"/>
+</joint>
+
+<joint name="arm_joint3" type="continuous">
+  <origin xyz="-0.167071 0.140587 0.402052" rpy="0 0 0"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="-0.027147 -0.999631 -0.0"/>
+</joint>
+
+<joint name="arm_joint4" type="continuous">
+  <origin xyz="-0.125354 -0.064621 -0.297002" rpy="0 0 0"/>
+  <parent link="link3_1"/>
+  <child link="link4_1"/>
+  <axis xyz="0.46054 -0.012507 0.887551"/>
+</joint>
+
+<joint name="arm_joint5" type="continuous">
+  <origin xyz="-0.051633 0.002455 -0.041001" rpy="0 0 0"/>
+  <parent link="link4_1"/>
+  <child link="link5_1"/>
+  <axis xyz="-0.885493 0.063005 0.46036"/>
+</joint>
+
+<joint name="trigger1" type="continuous">
+  <origin xyz="-0.043652 0.031342 -0.026724" rpy="0 0 0"/>
+  <parent link="gripper6_1"/>
+  <child link="gripper4_1"/>
+  <axis xyz="0.66914 0.564981 -0.482751"/>
+</joint>
+
+<joint name="arm_joint6" type="continuous">
+  <origin xyz="-0.000656 -0.0118 -0.058295" rpy="0 0 0"/>
+  <parent link="link5_1"/>
+  <child link="link6_1"/>
+  <axis xyz="0.463465 0.190528 0.86539"/>
+</joint>
+
+<joint name="trigger3" type="continuous">
+  <origin xyz="0.022 -0.049647 -0.025538" rpy="0 0 0"/>
+  <parent link="gripper2_1"/>
+  <child link="gripper3_1"/>
+  <axis xyz="0.66914 0.564981 -0.482751"/>
+</joint>
+
+<joint name="gripper1" type="continuous">
+  <origin xyz="-0.02121 0.01903 -0.055808" rpy="0 0 0"/>
+  <parent link="link6_1"/>
+  <child link="gripper5_1"/>
+  <axis xyz="-0.66914 -0.564981 0.482751"/>
+</joint>
+
+<joint name="trigger5" type="continuous">
+  <origin xyz="-0.030956 0.04139 -0.038178" rpy="0 0 0"/>
+  <parent link="link6_1"/>
+  <child link="gripper6_1"/>
+  <axis xyz="-0.66914 -0.564981 0.482751"/>
+</joint>
+
+<joint name="gripper2" type="continuous">
+  <origin xyz="0.002143 -0.013243 -0.061209" rpy="0 0 0"/>
+  <parent link="link6_1"/>
+  <child link="gripper2_1"/>
+  <axis xyz="-0.66914 -0.564981 0.482751"/>
+</joint>
+
+<joint name="trigger6" type="continuous">
+  <origin xyz="0.022581 -0.032598 -0.050561" rpy="0 0 0"/>
+  <parent link="link6_1"/>
+  <child link="gripper1_1"/>
+  <axis xyz="-0.66914 -0.564981 0.482751"/>
+</joint>
+
+<joint name="arm_joint1" type="continuous">
+  <origin xyz="0.086114 0.117764 0.138" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link1_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+</robot>
